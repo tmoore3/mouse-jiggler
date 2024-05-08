@@ -1,0 +1,11 @@
+[Unit]
+Description=Mouse Jiggler Service
+After=usbotg-config.service
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/bin/mouse-jiggler
+
+[Install]
+WantedBy=multi-user.target
